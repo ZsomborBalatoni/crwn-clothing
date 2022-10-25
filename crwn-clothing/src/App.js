@@ -1,22 +1,13 @@
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-import './App.css';
-import HomePage from './pages/homepage/homepage.component';
+import Home from './routes/home/home.component';
 
-
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
-
-function App() {
+const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path="/hats" element={<HatsPage />} />
+      <Route path='/' index element={<Home />} />
     </Routes>
   );
-}
+};
 
 export default App;
